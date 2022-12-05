@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Exercicio 1</title>
+<body>
+   Digite apenas UM caractere:
+
+   <input id="char" type="text"> <br />
+   <button onclick="check()">Checar</button>
+   <p id = "demo"></p>
+
+<script type="text/javascript">
+    
+
+    function check(){ 
+        vogais = ['a', 'e', 'i','o','u']
+        let letra = document.getElementById("char").value;
+        let vogal = vogais.includes(letra)
+        if (vogal == true){
+        alert(letra + '  is uma consoante meu chapa!')
+    } else {
+        alert(letra + " is not uma consoante meu chapa!")
+    }
+
+}
+</script>
+</body>
+</html>
