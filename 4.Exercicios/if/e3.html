@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+
+<body>
+    insira o primeiro valor
+    <input type="text" id="num1"><br><br>
+    insira o segundo valor
+    <input type="text" id="num2"><br><br>
+    insira o terceiro valor
+    <input type="text" id="num3"><br><br>
+    <button onclick="num()" id="btn">Calcule</button>
+
+    <script type="text/javascript">
+        let num = function () {
+            let valor1 = document.getElementById("num1").value;
+            let valor2 = document.getElementById("num2").value;
+            let valor3 = document.getElementById("num3").value;
+
+            if (valor1 > valor2 && valor3) {
+                alert("High number is: " + valor1)
+            } else if(valor2 > valor1 && valor3) {
+                alert("High number is: " + valor2)
+            } else {
+                alert("High number is: " + valor3)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
