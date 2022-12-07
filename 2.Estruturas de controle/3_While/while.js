@@ -1,19 +1,15 @@
-/* O comando While tem como objeto gerar laços que tenham uma 
-quantidade ideterminada de repetições; entretando, deve-se 
-tomar cuidado com seu uso, pois em alguns casos, pode-se ficar
-preso neste laço. */
+/* The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. 
+The condition is evaluated before executing the statement. */
 
-function numAleatorio(min, max){
-    const valor = Math.random()*(max- min) + min
+function getInteiroEntre (min, max) {
+    const valor = Math.random() * (max-min) + min;
     return Math.floor(valor)
 }
 
-let numero = 10 //valor inicial
+let opcao = 0
 
-do {//do while é pouquissimo utilizada no campo da programação
-    numero = numAleatorio(1,10)//embaralhar os numeros de 1 a 10
-    console.log(`numero ${numero}`)
-} while(numero != 8)//é diferente de 8? true=continua / false=para
-
-
-console.log('=====consulta encerrada====')
+while (opcao != -1) {
+    opcao = getInteiroEntre(-1, 10)
+    console.log(`a opção escolhida foi ` + opcao)
+}
+console.log('... fim ... ')
