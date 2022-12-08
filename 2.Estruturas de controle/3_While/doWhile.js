@@ -1,18 +1,26 @@
-/* Diferente da estrutura While, o Do/While 
- * não é necessário atribuir um valor inicial para a variável numero,
- *  ou seja, fazendo assim
- */
+/* The do...while statement creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, 
+resulting in the specified statement executing at least once. -MDN DOCS */
 
-function numAleatorio(min, max){
-    const valor = Math.random()*(max- min) + min
-    return Math.floor(valor)
-}
+let resultado = " ";
+let i = 0;
 
-let numero //valor inicial nulo
+do {
+  i++;
+  resultado += i;
+} while (i < 5);
 
-do {//dowhile é pouquissimo utilizada no campo da programação
-    numero = numAleatorio(1,10)//embaralhar os numeros de 1 a 10
-    console.log(`numero ${numero}`)
-} while(numero != 8)//é diferente de 8? true=continua / false=para
+console.log(`valor do primeiro exemplo ${resultado}`);
 
-console.log('fim da consulta')
+console.log(".........")
+/* Exemplo de código Udemy */
+let getInteiroEntre = function (min, max) {
+  const valor = Math.random() * (max - min) + min;
+  return Math.floor(valor);
+};
+
+let opcao = 0;
+let respostas = ' '
+do {
+  opcao = getInteiroEntre(-1, 10);
+  console.log(`a opção escolhida foi ${opcao}`);
+} while (opcao != -1);
