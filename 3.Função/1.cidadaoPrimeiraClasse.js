@@ -1,45 +1,53 @@
-// Função em JS é First-Class Object (Citizens)
-//Higher-Order function
+/* Função em JS - First Class Citizen  
+ou Higher-order Function.
 
-//função é tratado como um dado, e utiliza-lo como parametro
-//função pode retornar mais dados, função pode haver outras funções
+Função é trato como um dado. Logo, pode-se passar como valores, 
+passá-los como argumentos e retornar uma função de outra função.
+*/
 
-// criar de forma literal
-
-function fun1(val)/*<- parametros*/ { }/*<- (bloco de código)sentença de código*/
-/*definir um valor na função é opcional, 
-porém ira retornar undefined caso vc não insira o 
-return em sua função */
-
-
-//armazendando em uma variavel 
- const fun2 = function( ){ }//função anonima e associa a constante
- //ao chamar a const com os () irá chamar a função
-
- // armazendando em um array
-  const array = [function (a, b){return a + b }, fun1, fun2]
-  console.log(array[0](2,3))
-
-// armazenar o atributo em um objeto
-const obj = {}
-obj.falar = function(){return 'opa'}
-console.log(obj.falar())
-
-// Passar função como parametro
-function run(fun){
-fun()
+/* Declaração Literal */
+function fun1() {
+  /* statement */
 }
 
-run(function(){console.log('executando...')})
+/* Armazenando em uma variavel */
+const fun2 = function () {
+  /* statement */
+};
 
-//uma função pode retorar/conter uma função
+/* Funções dentro de um array */
+const arr = [
+  function (a, b) {
+    return a + b;
+  },
+  fun1,
+  fun2,
+];
+console.log(arr[0](2, 3));
 
-function soma(a,b){
-    return function(c){
-        console.log(a + b + c)
-    }
+/* Armazenar em um atributo de objeto */
+const obj = {};
+obj.falar = function () {
+  return "opa!";
+};
+
+console.log(obj.falar());
+/* Funções como parametros */
+function run(fun) {
+  fun();
 }
-soma(1, 2)(3)
-const cincoMais = soma(1, 2)
-//ou
-cincoMais(3)
+run(function () {
+  console.log("executando....");
+});
+
+/* Uma função pode retornar/conter uma outra função */
+function soma(a, b) {
+  return function (c) {
+    console.log(a + b + c);
+  };
+}
+soma(2, 3)(3);
+/* Podemos utilizar os valores de nossas 
+função em uma variavel que o resultado sera o mesmo */
+let cincoMais = soma(2, 3);
+cincoMais(3);
