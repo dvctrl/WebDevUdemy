@@ -24,9 +24,10 @@ function soma2(a,b,c){
 
     return a + b + c
 } 
-
 console.log(`função2 -- ${soma2()}, ${soma2(1)}, ${soma2(2,3)}, ${soma2(0, 0, 0)}`)
 
+
+/* valor padrão ES2015 */
 function soma3(a=1, b=1, c=1) {
     return a + b + c
 }
