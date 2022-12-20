@@ -1,19 +1,15 @@
-/* let user = {
-    name: 'John',
-    age: 30,
+objeto = {
+  propriedade1: "nomeProduto",
+  propriedade2: 10,
+  propriedade3: "origem: Cuiabá",
 
-    sayHi(){
-        console.log(this.name)
-    }
-}
-user.sayHi() */
-
-let user = {
-  name: "John",
-  age: 30,
-
-  sayHi() {
-    console.log(user.name);
+  mostrar() {
+    console.log(
+      `o primeiro parametro é ${this.propriedade1}`
+    ); /* em um contexto lexico, o parametro1 deve ser acessado com a utilzação do this  */
   },
 };
-user.sayHi();
+
+objeto.mostrar(); 
+
+/* o this é utilizado para acessarmos as propriedades dos objetos. */
