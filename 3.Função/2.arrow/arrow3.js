@@ -1,13 +1,22 @@
-let comparaComThis = function(param){
-    console.log(this == param);
+let comparacomthis = function(param){
+    console.log(this === param)
 }
 
-comparaComThis(global)
+comparacomthis(global)
 
 const obj = {}
-comparaComThis = comparaComThis.bind(obj)
-comparaComThis(global)
-comparaComThis(obj)
 
-let comparaComThisArrow = param => console.log(this === param)
-comparaComThisArrow(global)
+comparacomthis = comparacomthis.bind(obj)
+
+comparacomthis(global)
+comparacomthis(obj)
+
+
+let comparacomthisArrow = param => console.log(this === param) 
+comparacomthisArrow(global)
+comparacomthisArrow(module.exports)
+
+comparacomthisArrow = comparacomthisArrow.bind(obj)
+
+comparacomthisArrow(obj)
+comparacomthisArrow(module.exports)
