@@ -8,3 +8,7 @@ function imprimirNome(nome, indice) {
 
 fabricantes.forEach(imprimirNome);
 fabricantes.forEach((fabricante) => console.log(fabricante));
+fabricantes.forEach(function(fabricante){
+  console.log(fabricante);
+})
+
