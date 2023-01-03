@@ -1,4 +1,5 @@
 const pessoa = nome => {
+    this.nome = nome
     return{
         falar: () => {console.log(`meu nome é ${nome}`)}
     }

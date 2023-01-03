@@ -1,19 +1,14 @@
-const math = {
-    sum (a, b) {
-        console.log(a + b)
-    },
-    sub (a, b) {
-        console.log(a - b)
-    },
-    mult (a, b) {
-        console.log(a * b)
-    },
-    div (a, b) {
-        console.log(a / b)
-    },
+/* 01) Crie uma função que dado dois valores (passados como parâmetros) mostre no console a soma, subtração,
+multiplicação e divisão desses valores.
+ */
+function calculos(a,b){
+    return console.log(`
+        soma: ${a + b}\n
+        subtração: ${a - b}\n
+        multiplicação: ${a * b}\n
+        divisão: ${a / b}
+    `)
 }
 
-math.sum(9,10)
-math.sub(9,10)
-math.mult(9,10)
-math.div(9,10)
+
+calculos(9,8)
